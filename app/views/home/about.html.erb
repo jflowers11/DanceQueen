@@ -1,0 +1,18 @@
+<h1><center>What DanceDance Is All About</center></h1><br>
+
+
+<p>When you dance, your cardiovascular system improves, your muscle tone increases and you burn calories. This low-impact aerobic activity also increases flexibility, strength and balance. Dancing is great exercise in a pleasant and fun atmosphere.
+
+Dancing has been rated the second best form of exercise when comparing both positive and negative affects to the human body. The physicality involved with freestyle or partner dancing is the perfect balance of strength, flexibility and cardio.</p>
+
+<br>
+</p>
+<% if user_signed_in? %>
+  <div>Signed in as... <%= current_user.email %></div>
+   <h3><center><%=link_to("Check out our classes ", class_styles_path) %></center></h3><br>
+   <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+
+  <% else %>
+  You are not signed in. Please sign in to continue.
+   <h2><%= link_to('Login Here', new_user_session_path) %></h2>
+<% end %></p>

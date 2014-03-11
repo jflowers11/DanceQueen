@@ -1,0 +1,68 @@
+<center><h1>Classes</h1><br><br>
+
+<table>
+  <thead>
+    <tr>
+
+  <select>
+  <option value="Latin">Latin
+      <option value = "zumba">Zumba</option>
+      <option value = "salsa">Salsa</option>
+      <option value = "raggaeton">Reggaeton</option>
+</option>
+</select><br><br>
+
+<img src="assets/latin.jpg"> 
+
+<select>
+<option value="Freestyle">Freestyle
+      <option value = "hip-hop">Hip-hop</option>
+      <option value = "contemporary">Contemporary</option>
+      <option value = "rave">Rave</option>
+</option>
+</select><br><br>
+
+<img src="assets/freestyle_dancer.png"> 
+
+<select>
+<option value="Partner">Partner
+      <option value = "tango">Tango</option>
+      <option value = "ballroom">Ballroom</option>
+      <option value = "cirque du soleil">Cirque Du Soleil</option>
+</option>
+</select>
+
+<img src="assets/partner.jpg" height="300" width="300" >
+</center>
+
+      <!-- <th>User</th>
+      <th>Latin</th>
+
+
+
+      <th>Partner</th>
+      <th>Freestyle</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead> -->
+
+  <tbody>
+    <% @class_styles.each do |class_style| %>
+      <tr>
+        <td><%= class_style.user_id %></td>
+        <td><%= class_style.latin %></td>
+        <td><%= class_style.partner %></td>
+        <td><%= class_style.freestyle %></td>
+        <td><%= link_to 'Show', class_style %></td>
+        <td><%= link_to 'Edit', edit_class_style_path(class_style) %></td>
+        <td><%= link_to 'Destroy', class_style, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

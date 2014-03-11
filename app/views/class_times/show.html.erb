@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @class_time.user_id %>
+</p>
+
+<p>
+  <strong>Class:</strong>
+  <%= @class_time.class_id %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @class_time.time %>
+</p>
+
+<%= link_to 'Edit', edit_class_time_path(@class_time) %> |
+<%= link_to 'Back', class_times_path %>

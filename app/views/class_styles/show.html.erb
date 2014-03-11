@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <strong>User:</strong>
+  <%= @class_style.user_id %>
+</p>
+
+<p>
+  <strong>Latin:</strong>
+  <%= @class_style.latin %>
+</p>
+
+<p>
+  <strong>Partner:</strong>
+  <%= @class_style.partner %>
+</p>
+
+<p>
+  <strong>Freestyle:</strong>
+  <%= @class_style.freestyle %>
+</p>
+
+<%= link_to 'Edit', edit_class_style_path(@class_style) %> |
+<%= link_to 'Back', class_styles_path %>

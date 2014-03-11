@@ -1,0 +1,33 @@
+<%= form_for(@class_style) do |f| %>
+  <% if @class_style.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@class_style.errors.count, "error") %> prohibited this class_style from being saved:</h2>
+
+      <ul>
+      <% @class_style.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :latin %><br>
+    <%= f.text_field :latin %>
+  </div>
+  <div class="field">
+    <%= f.label :partner %><br>
+    <%= f.text_field :partner %>
+  </div>
+  <div class="field">
+    <%= f.label :freestyle %><br>
+    <%= f.text_field :freestyle %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
