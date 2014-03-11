@@ -1,18 +1,30 @@
 <h1><center>What DanceDance Is All About</center></h1><br>
 
-
+<div id="content-wrapper">
+		<div id="content"><div id="content-text">
+			<h2>Health and Wellness</h2>
 <p>When you dance, your cardiovascular system improves, your muscle tone increases and you burn calories. This low-impact aerobic activity also increases flexibility, strength and balance. Dancing is great exercise in a pleasant and fun atmosphere.
 
 Dancing has been rated the second best form of exercise when comparing both positive and negative affects to the human body. The physicality involved with freestyle or partner dancing is the perfect balance of strength, flexibility and cardio.</p>
 
+
 <br>
-</p>
+
+<p><h2>Strength</h2>
+Strength is defined as the ability of a muscle to exert a force against resistance. Dancing builds strength by forcing the muscles to resist against a dancer's own body weight. Many styles of dance, including jazz and ballet, require jumping and leaping high into the air. Jumping and leaping require tremendous strength of the major leg muscles. Ballroom dancing builds strength. Consider the muscle mass a male ballroom dancer develops by lifting his partner above his head</p><br>
+
+</div>
+
+ <h3><center><%=link_to("Check out our classes ", class_styles_path) %></center></h3><br>
+
+ </p>
 <% if user_signed_in? %>
   <div>Signed in as... <%= current_user.email %></div>
-   <h3><center><%=link_to("Check out our classes ", class_styles_path) %></center></h3><br>
+   <!-- <h3><center><%=link_to("Become a part of the DanceDance Revolution", home_about_path) %></center></h3> -->
+   <br>
    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
 
   <% else %>
-  You are not signed in. Please sign in to continue.
-   <h2><%= link_to('Login Here', new_user_session_path) %></h2>
+  You are not signed in. Please sign in to join the dance team.
+   <h3><%= link_to('Login Here', new_user_session_path) %></h3>
 <% end %></p>

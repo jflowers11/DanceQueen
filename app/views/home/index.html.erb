@@ -1,6 +1,4 @@
-<h1>!DANCE-DANCE!</h1><br>
-
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html>
 <head>
 <style>
@@ -11,14 +9,7 @@ body{
 </style>
 </head>
 
+<center><h1><font color="blue">!DANCE-DANCE!</font></h1></center><br>
 
-</p>
-<% if user_signed_in? %>
-  <div>Signed in as... <%= current_user.email %></div>
-   <h3><center><%=link_to("Become a part of the Dance Revolution", home_about_path) %></center></h3><br>
-   <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
 
-  <% else %>
-  You are not signed in. Please sign in to continue.
-   <h2><%= link_to('Login Here', new_user_session_path) %></h2>
-<% end %></p>
+<center><p><h2><font color="green">The new dance craze you dont want to miss out on.</font></h2></p></center>

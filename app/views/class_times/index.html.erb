@@ -3,13 +3,17 @@
 <table>
   <thead>
     <tr>
-      <th>User</th>
+      <!--<th>User</th>
       <th>Class</th>
       <th>Time</th>
       <th></th>
       <th></th>
-      <th></th>
-    </tr>
+      <th></th> -->
+     <th>Time</th>
+
+<h2><%=link_to("Choose your class and time!", new_class_time_path) %></h2>
+<!-- this will list all the classes and their times -->
+   </tr>
   </thead>
 
   <tbody>
@@ -28,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Class time', new_class_time_path %>
+<%= link_to 'New Class time', new_class_time_path %> 

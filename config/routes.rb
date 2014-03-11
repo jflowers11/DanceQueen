@@ -7,6 +7,7 @@ DanceQueen::Application.routes.draw do
   root 'home#index'
 
   
+  get "user/about"
   get "user/index"
   get "home/index"
   get "home/about"

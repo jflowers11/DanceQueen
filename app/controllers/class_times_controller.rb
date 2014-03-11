@@ -1,6 +1,6 @@
 class ClassTimesController < ApplicationController
   before_action :set_class_time, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!
+  
   
   # GET /class_times
   # GET /class_times.json

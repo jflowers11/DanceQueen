@@ -1,6 +1,6 @@
 class ClassStylesController < ApplicationController
   before_action :set_class_style, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!
+
   # GET /class_styles
   # GET /class_styles.json
   def index
