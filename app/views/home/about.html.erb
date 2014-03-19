@@ -18,13 +18,3 @@ Strength is defined as the ability of a muscle to exert a force against resistan
  <h3><center><%=link_to("Check out our classes ", class_styles_path) %></center></h3><br>
 
  </p>
-<% if user_signed_in? %>
-  <div>Signed in as... <%= current_user.email %></div>
-   <!-- <h3><center><%=link_to("Become a part of the DanceDance Revolution", home_about_path) %></center></h3> -->
-   <br>
-   <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-
-  <% else %>
-  You are not signed in. Please sign in to join the dance team.
-   <h3><%= link_to('Login Here', new_user_session_path) %></h3>
-<% end %></p>

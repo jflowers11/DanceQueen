@@ -1,4 +1,4 @@
-<h1>Class Times</h1>
+<h1>Class Schedules</h1>
 
 <table>
   <thead>
@@ -8,11 +8,37 @@
       <th>Time</th>
       <th></th>
       <th></th>
-      <th></th> -->
-     <th>Time</th>
+      <th></th> 
+     <th>Time</th> -->
 
-<h2><%=link_to("Choose your class and time!", new_class_time_path) %></h2>
+<h2>Choose your class and time!</h2><br><br>
 <!-- this will list all the classes and their times -->
+<div id="contentBox" style="margin:0px auto; width:70%">
+
+ <!-- columns divs, float left, no margin so there is no space between column, width=1/3 -->
+    <div id="column1" style="float:left; margin:0; width:33%;">
+    <font color="orange"><h2>LATIN</h2>
+    <%=link_to("Zumba", new_class_time_path) %><br>
+    <%=link_to("Salsa", new_class_time_path) %><br>
+    <%=link_to("Reggaeton", new_class_time_path) %>
+    </div>
+
+    <div id="column2" style="float:left; margin:0;width:33%;">
+    <font color="purple"><h2>Freestyle</h2></font>
+    <%=link_to("Hip-Hop", new_class_time_path) %><br>
+    <%=link_to("Contemporary", new_class_time_path) %><br>
+    <%=link_to("Rave", new_class_time_path) %>
+
+    </div>
+
+    <div id="column3" style="float:left; margin:0;width:33%">
+    <font color="green"><h2>Partner</h2></font>
+    <%=link_to("Tango", new_class_time_path) %><br>
+    <%=link_to("Ballroon", new_class_time_path) %><br>
+    <%=link_to("Cirque Du Soliel", new_class_time_path) %>
+    </div>
+</div> 
+
    </tr>
   </thead>
 
@@ -32,4 +58,4 @@
 
 <br>
 
-<%= link_to 'New Class time', new_class_time_path %> 
+<!-- <%= link_to 'New Class time', new_class_time_path %>  -->

@@ -26,6 +26,8 @@ class ClassTimesController < ApplicationController
   # POST /class_times.json
   def create
     @class_time = ClassTime.new(class_time_params)
+    @class_time.user_id = @current_user.id   #the user who is currently signed in for this class
+                                            #displays their id
 
     respond_to do |format|
       if @class_time.save

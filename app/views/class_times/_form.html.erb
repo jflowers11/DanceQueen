@@ -11,19 +11,34 @@
     </div>
   <% end %>
 
-  <div class="field">
+   <div class="field">
     <%= f.label :user_id %><br>
     <%= f.number_field :user_id %>
-  </div>
+  </div> 
+
   <div class="field">
     <%= f.label :class_id %><br>
     <%= f.number_field :class_id %>
   </div>
+ 
   <div class="field">
     <%= f.label :time %><br>
     <%= f.time_select :time %>
+  </div> 
+
+
+<div class="actions">
+    <%= f.submit 'Pay Now' %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<% end %> 
+
+<% if user_signed_in? %>
+  <div>Signed in as... <%= current_user.email %></div>
+   <!-- <h3><center><%=link_to("Become a part of the DanceDance Revolution", home_about_path) %></center></h3> -->
+   <br>
+   <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+
+  <% else %>
+  You are not signed in. Please sign in to enroll in our awesome, energizing classes.
+   <h3><%= link_to('Login Here', new_user_session_path) %></h3>
+<% end %></p>
